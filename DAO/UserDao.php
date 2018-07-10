@@ -1,8 +1,6 @@
 <?php
 
-require_once "../interface/DBManager.php";
-require_once "../DAO/UserDao.php";
-require_once "../model/User.php";
+require_once "../utils/include.php";
 
 class UserDAO
 {
@@ -23,7 +21,7 @@ class UserDAO
 
         } catch (Exception $e) {
 
-            echo "error:" . $e->getMessage();
+//            echo "error:" . $e->getMessage();
         }
     }
 
@@ -57,28 +55,43 @@ class UserDAO
         return $result_arr;
     }
 
+    public function findUserById($id)
+    {
+        $result_arr = $this->dbManager->queryOne("select * from user where id=" . $id);
+        return $result_arr;
+    }
+
+    public function findUserNotValid()
+    {
+        $result_arr = $this->dbManager->queryAll("select * from user where identity=1 and isValid=false");
+        return $result_arr;
+    }
+
+    public function testQuery()
+    {
+        $arr = $this->queryUserList();
+        foreach ($arr as $value) {
+            echo "" . $value['username'] . " " . $value['pwd'] . " " . $value['idcard'] . "\n";
+        }
+    }
+
+    public function testAdd()
+    {
+        $user = new User();
+        $user->init(array("lbs", "123456", "411027"));
+        $this->addUser($user);
+    }
+
+    public function testModify()
+    {
+    }
+
+    public function testDelete()
+    {
+        $this->deleteUser(3);
+    }
 }
 
-$userDao = new UserDAO();
-
-// $arr = $user->queryUserList();
-// foreach ($arr as $value) {
-//     echo "".$value['username']. " " . $value['pwd'] . " " . $value['idcard'] . "\n";
-// }
-
-
-//$user = new User();
-//$user->init(array("lbs", "123456", "411027"));
-//$userDao->addUser($user);
-//echo "添加成功\n";
-
-//$userModify=array("liudehua","gggggg",40,2,);
-//$user->modifyUser($userModify);
-//echo "修改成功！";
-
-/*
-用户删除
-
-$user->deleteUser(3);
-echo "删除成功！";
- */
+//$userDao = new UserDAO();
+//$userDao->testQuery();
+//$userDao->testAdd();

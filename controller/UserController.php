@@ -1,22 +1,28 @@
 <?php
 
-require_once "../DAO/UserDao.php";
-require_once "../model/User.php";
+require_once "../utils/include.php";
 
 class UserController
 {
     public $userdao;
     private $type;
+    private $ajax_type;
+    public $validate;
 
     public function __construct()
     {
         $this->userdao = new UserDAO();
-        $this->type = $_GET['type'];
+        if (isset($_GET['type'])) {
+            $this->type = $_GET['type'];
+        }
+        if (isset($_GET['ajax_type'])) {
+            $this->ajax_type = $_GET['ajax_type'];
+        }
+        $this->validate = new Validate();
     }
 
     public function run()
     {
-        var_dump($this->type);
         switch ($this->type) {
             case "user-register":
                 $this->Register();
@@ -24,7 +30,19 @@ class UserController
             case "user-login":
                 $this->Login();
                 break;
+            case "user-logout":
+                $this->Logout();
+                break;
             case "archives-register":
+                break;
+        }
+    }
+
+    public function ajaxRun()
+    {
+        switch ($this->ajax_type) {
+            case "show_users":
+                $this->ShowUsers();
                 break;
         }
     }
@@ -38,19 +56,63 @@ class UserController
         $data = array($username, $pwd, $idcard);
         $user->init($data);
         $this->userdao->addUser($user);
-        header("Location: /index.php");
+        redirect("/index.php");
     }
 
     public function Login()
     {
         $username = $_POST['username'];
         $pwd = $_POST['password'];
-        $aupwd = $this->userdao->findUserByName($username)['pwd'];
+        $user = $this->userdao->findUserByName($username);
+        if ($user == null) {
+            redirect("/index.php");
+        }
+        $aupwd = $user['pwd'];
         if ($pwd == $aupwd) {
-            echo "success";
+            if ($this->validate->addSession($user)) {
+                redirect("/view/AdminHome.php");
+            } else {
+                redirect("/view/404.php");
+            }
+        } else {
+            redirect("/view/404.php");
+        }
+    }
+
+    public function ShowUsers()
+    {
+        $users = $this->userdao->findUserNotValid();
+        $res['code'] = 200;
+        $res['msg'] = 'ok';
+        $res['data'] = array();
+        foreach ($users as $row) {
+            $user['id'] = $row['id'];
+            $user['username'] = $row['username'];
+            $user['idcard'] = $row['idcard'];
+            $user['company'] = $row['company'];
+            array_push($res['data'], $user);
+        }
+        echo json_encode($res);
+    }
+
+    public function UserLogin()
+    {
+
+    }
+
+    public function AdminLogin()
+    {
+
+    }
+
+    public function Logout()
+    {
+        if ($this->validate->removeSession()) {
+            redirect("/index.php");
         }
     }
 }
 
 $userController = new UserController();
 $userController->run();
+$userController->ajaxRun();

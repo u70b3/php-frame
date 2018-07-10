@@ -5,7 +5,7 @@
  * Date: 2018/7/9
  * Time: 14:20
  */
-require_once "../Config.php";
+require_once "../utils/include.php";
 
 class DBManager
 {
@@ -30,6 +30,7 @@ class DBManager
         );
     }
 
+
     public function run($sql)
     {
         $this->setSql($sql);
@@ -49,7 +50,11 @@ class DBManager
         $rs = $this->entity->query($sql);
         $rs->setFetchMode($this->entity::FETCH_ASSOC);
         $result_arr = $rs->fetchAll();
-        return $result_arr[0];
+        if (!empty($result_arr)) {
+            return $result_arr[0];
+        } else {
+            return null;
+        }
     }
 
     public function queryAll($sql)
@@ -67,4 +72,4 @@ class DBManager
 
 }
 
-$dbManager = new DBManager();
+//$dbManager = new DBManager();
