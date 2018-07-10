@@ -7,8 +7,14 @@
  */
 require_once '../utils/include.php';
 
+/**
+ * Class Validate
+ */
 class Validate
 {
+    /**
+     * @var UserDAO
+     */
     public $userdao;
 
     /**
@@ -19,6 +25,9 @@ class Validate
         $this->userdao = new UserDAO();
     }
 
+    /**
+     * @return null
+     */
     public function isLogin()
     {
         session_start();
@@ -27,6 +36,10 @@ class Validate
         return $user;
     }
 
+    /**
+     * @param $user
+     * @return bool
+     */
     public function addSession($user)
     {
         if (!isset($user['id'])) {
@@ -37,6 +50,9 @@ class Validate
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function removeSession(): bool
     {
         if (isset($_SESSION['id'])) {

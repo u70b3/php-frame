@@ -5,14 +5,24 @@ require_once "../utils/include.php";
 class UserDAO
 {
 
+    /**
+     * @var DBManager
+     */
     public $dbManager;
 
+    /**
+     * UserDAO constructor.
+     */
     public function __construct()
     {
         $this->dbManager = new DBManager();
     }
 
     //添加用户
+
+    /**
+     * @param $user
+     */
     public function addUser($user)
     {
         try {
@@ -26,6 +36,11 @@ class UserDAO
     }
 
     //修改用户
+
+    /**
+     * @param $user
+     * @param $id
+     */
     public function modifyUser($user, $id)
     {
 
@@ -34,12 +49,20 @@ class UserDAO
     }
 
     //删除用户
+
+    /**
+     * @param $id
+     */
     public function deleteUser($id)
     {
         $this->dbManager->run("delete from  user where id=" . $id);
     }
 
     //查询所有用户
+
+    /**
+     * @return array
+     */
     public function queryUserList()
     {
         $entity = $this->dbManager->entity;
@@ -49,24 +72,38 @@ class UserDAO
         return $result_arr;
     }
 
+    /**
+     * @param $name
+     * @return null
+     */
     public function findUserByName($name)
     {
         $result_arr = $this->dbManager->queryOne("select * from user where username='" . "$name'");
         return $result_arr;
     }
 
+    /**
+     * @param $id
+     * @return null
+     */
     public function findUserById($id)
     {
         $result_arr = $this->dbManager->queryOne("select * from user where id=" . $id);
         return $result_arr;
     }
 
+    /**
+     * @return array
+     */
     public function findUserNotValid()
     {
         $result_arr = $this->dbManager->queryAll("select * from user where identity=1 and isValid=false");
         return $result_arr;
     }
 
+    /**
+     *
+     */
     public function testQuery()
     {
         $arr = $this->queryUserList();
@@ -75,6 +112,9 @@ class UserDAO
         }
     }
 
+    /**
+     *
+     */
     public function testAdd()
     {
         $user = new User();
@@ -82,10 +122,16 @@ class UserDAO
         $this->addUser($user);
     }
 
+    /**
+     *
+     */
     public function testModify()
     {
     }
 
+    /**
+     *
+     */
     public function testDelete()
     {
         $this->deleteUser(3);

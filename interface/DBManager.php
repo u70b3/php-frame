@@ -13,9 +13,18 @@ class DBManager
      * DBManager constructor.
      */
     public $config;
+    /**
+     * @var PDO
+     */
     public $entity;
+    /**
+     * @var
+     */
     private $sql;
 
+    /**
+     * DBManager constructor.
+     */
     public function __construct()
     {
         $this->config = new Config();
@@ -31,6 +40,9 @@ class DBManager
     }
 
 
+    /**
+     * @param $sql
+     */
     public function run($sql)
     {
         $this->setSql($sql);
@@ -45,6 +57,10 @@ class DBManager
         $this->sql = $sql;
     }
 
+    /**
+     * @param $sql
+     * @return null
+     */
     public function queryOne($sql)
     {
         $rs = $this->entity->query($sql);
@@ -57,6 +73,10 @@ class DBManager
         }
     }
 
+    /**
+     * @param $sql
+     * @return array
+     */
     public function queryAll($sql)
     {
         $rs = $this->entity->query($sql);
@@ -65,6 +85,11 @@ class DBManager
         return $result_arr;
     }
 
+    /**
+     * @param $sql
+     * @param $start
+     * @param $end
+     */
     public function queryLimit($sql, $start, $end)
     {
 

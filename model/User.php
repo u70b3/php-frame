@@ -2,8 +2,17 @@
 
 class User
 {
+    /**
+     * @var string
+     */
     public $username;
+    /**
+     * @var string
+     */
     public $pwd;
+    /**
+     * @var string
+     */
     public $idcard;
 
     /**
@@ -71,6 +80,9 @@ class User
         $this->idcard = $idcard;
     }
 
+    /**
+     * @param $arr
+     */
     public function init($arr)
     {
         $this->setUsername($arr[0]);
