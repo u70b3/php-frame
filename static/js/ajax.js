@@ -31,6 +31,8 @@ $(document).ready(function () {
                         <div class="thumbnail">
                             <div class="caption" >
                                 <table class="table table-hover table-bordered table-striped">
+                                
+                                    <tr><td>id</td>     <td>${id}</td></tr>
                                     <tr><td>用户名</td>     <td>${username}</td></tr>
                                     <tr><td>身份证号</td>     <td>${idcard}</td></tr>
                                     <tr><td>所属单位</td>     <td>${company}</td></tr>

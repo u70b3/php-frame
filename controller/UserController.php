@@ -56,7 +56,7 @@ class UserController
         $data = array($username, $pwd, $idcard);
         $user->init($data);
         $this->userdao->addUser($user);
-        redirect("/index.php");
+        redirect("/index.html");
     }
 
     public function Login()
@@ -65,17 +65,17 @@ class UserController
         $pwd = $_POST['password'];
         $user = $this->userdao->findUserByName($username);
         if ($user == null) {
-            redirect("/index.php");
+            redirect("/index.html");
         }
         $aupwd = $user['pwd'];
         if ($pwd == $aupwd) {
             if ($this->validate->addSession($user)) {
-                redirect("/view/AdminHome.php");
+                redirect("/view/AdminHome.html");
             } else {
-                redirect("/view/404.php");
+                redirect("/view/404.html");
             }
         } else {
-            redirect("/view/404.php");
+            redirect("/view/404.html");
         }
     }
 
@@ -108,7 +108,7 @@ class UserController
     public function Logout()
     {
         if ($this->validate->removeSession()) {
-            redirect("/index.php");
+            redirect("/index.html");
         }
     }
 }
