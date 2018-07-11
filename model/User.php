@@ -14,7 +14,31 @@ class User
      * @var string
      */
     public $idcard;
+    /**
+     * @var int
+     */
+    public $isValid;
+    /**
+     * @var int
+     */
+    public $identity;
+    public $company;
 
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company): void
+    {
+        $this->company = $company;
+    }
     /**
      * User constructor.
      */
@@ -23,6 +47,9 @@ class User
         $this->username = '';
         $this->pwd = '';
         $this->idcard = '';
+        $this->identity = 1;
+        $this->isValid = 0;
+        $this->company = '';
     }
 //
 //    public function __construct($username, $pwd, $idcard)
@@ -88,5 +115,37 @@ class User
         $this->setUsername($arr[0]);
         $this->setPwd($arr[1]);
         $this->setIdcard($arr[2]);
+    }
+
+    /**
+     * @return int
+     */
+    public function getisValid(): int
+    {
+        return $this->isValid;
+    }
+
+    /**
+     * @param int $isValid
+     */
+    public function setIsValid(int $isValid): void
+    {
+        $this->isValid = $isValid;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdentity(): int
+    {
+        return $this->identity;
+    }
+
+    /**
+     * @param int $identity
+     */
+    public function setIdentity(int $identity): void
+    {
+        $this->identity = $identity;
     }
 }

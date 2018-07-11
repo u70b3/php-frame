@@ -23,6 +23,7 @@ class UserController
 
     public function run()
     {
+        session_start();
         switch ($this->type) {
             case "user-register":
                 $this->Register();
@@ -34,6 +35,12 @@ class UserController
                 $this->Logout();
                 break;
             case "archives-register":
+                break;
+            case "admin-pass":
+                $this->adminPass();
+                break;
+            case "admin-delete":
+                $this->adminDelete();
                 break;
         }
     }
@@ -59,26 +66,6 @@ class UserController
         redirect("/index.html");
     }
 
-    public function Login()
-    {
-        $username = $_POST['username'];
-        $pwd = $_POST['password'];
-        $user = $this->userdao->findUserByName($username);
-        if ($user == null) {
-            redirect("/index.html");
-        }
-        $aupwd = $user['pwd'];
-        if ($pwd == $aupwd) {
-            if ($this->validate->addSession($user)) {
-                redirect("/view/AdminHome.html");
-            } else {
-                redirect("/view/404.html");
-            }
-        } else {
-            redirect("/view/404.html");
-        }
-    }
-
     public function ShowUsers()
     {
         $users = $this->userdao->findUserNotValid();
@@ -95,12 +82,48 @@ class UserController
         echo json_encode($res);
     }
 
-    public function UserLogin()
+    public function Login()
+    {
+        $username = $_POST['username'];
+        $pwd = $_POST['password'];
+        $user = $this->userdao->findUserByName($username);
+        if ($user == null) {
+            redirect("/index.html");
+            return;
+        }
+        $aupwd = $user['pwd'];
+        if ($pwd != $aupwd) {
+            redirect("/view/404.html");
+            return;
+        }
+        if ($user['isValid'] == false) {
+            redirect("/index.html");
+            return;
+        }
+        if ($user['identity'] == 0) {
+            if ($this->validate->addSession($user)) {
+                redirect("/view/AdminHome.html");
+                return;
+            }
+            redirect("/view/404.html");
+            return;
+        }
+        if ($user['identity'] == 1) {
+            if ($this->validate->addSession($user)) {
+                redirect("/view/UserHome.html");
+                return;
+            }
+            redirect("/view/404.html");
+            return;
+        }
+    }
+
+    private function UserLogin()
     {
 
     }
 
-    public function AdminLogin()
+    private function AdminLogin()
     {
 
     }
@@ -108,6 +131,28 @@ class UserController
     public function Logout()
     {
         if ($this->validate->removeSession()) {
+            redirect("/index.html");
+        }
+    }
+
+    public function adminPass()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $this->userdao->modifyValid($id);
+            redirect("/view/AdminHome.html");
+        } else {
+            redirect("/index.html");
+        }
+    }
+
+    public function adminDelete()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $this->userdao->deleteUser($id);
+            redirect("/view/AdminHome.html");
+        } else {
             redirect("/index.html");
         }
     }

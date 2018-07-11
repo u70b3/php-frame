@@ -59,7 +59,10 @@ class UserDAO
     }
 
     //查询所有用户
-
+    public function modifyValid($id)
+    {
+        $this->dbManager->run("update user set isValid=TRUE where id=$id");
+    }
     /**
      * @return array
      */
