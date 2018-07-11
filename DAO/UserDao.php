@@ -2,6 +2,9 @@
 
 require_once "../utils/include.php";
 
+/**
+ * Class UserDAO
+ */
 class UserDAO
 {
 
@@ -58,11 +61,23 @@ class UserDAO
         $this->dbManager->run("delete from  user where id=" . $id);
     }
 
-    //查询所有用户
+    /**
+     * @param $id
+     */
     public function modifyValid($id)
     {
         $this->dbManager->run("update user set isValid=TRUE where id=$id");
     }
+
+    /**
+     * @param $company
+     * @param $id
+     */
+    public function modifyCompany($company, $id)
+    {
+        $this->dbManager->run("update user set company='" . "$company' where id=$id");
+    }
+
     /**
      * @return array
      */

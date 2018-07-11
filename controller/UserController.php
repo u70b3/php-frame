@@ -51,6 +51,9 @@ class UserController
             case "show_users":
                 $this->ShowUsers();
                 break;
+            case "check_username":
+                $this->apiCheckLogin();
+                break;
         }
     }
 
@@ -69,17 +72,30 @@ class UserController
     public function ShowUsers()
     {
         $users = $this->userdao->findUserNotValid();
-        $res['code'] = 200;
-        $res['msg'] = 'ok';
-        $res['data'] = array();
-        foreach ($users as $row) {
-            $user['id'] = $row['id'];
-            $user['username'] = $row['username'];
-            $user['idcard'] = $row['idcard'];
-            $user['company'] = $row['company'];
-            array_push($res['data'], $user);
+        $response = new Response(
+            200,
+            'ok',
+            $users
+        );
+        echo $response->makeResponse();
+    }
+
+    public function apiCheckLogin()
+    {
+        if (isset($_POST['username'])) {
+            $username = $_POST['username'];
+            $user = $this->userdao->findUserByName($username);
+            $response = new Response(
+                200,
+                '可以使用',
+                null
+            );
+            if ($user != null) {
+                $response->setCode(400);
+                $response->setMsg('用户名已经被注册');
+            }
+            echo $response->makeResponse();
         }
-        echo json_encode($res);
     }
 
     public function Login()
