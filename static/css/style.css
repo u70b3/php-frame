@@ -19,3 +19,8 @@ form {
 h5 {
     color: #cc00ff;
 }
+
+a {
+    text-decoration: none;
+    color: #6f2478;
+}

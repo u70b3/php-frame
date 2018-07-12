@@ -8,7 +8,6 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (res) {
             showUserInfo(res);
-            //已经是parse过的了
         },
         error: function (error) {
             console.log('error');

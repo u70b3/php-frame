@@ -2,13 +2,31 @@
 
 require_once "../utils/include.php";
 
+/**
+ * Class UserController
+ */
 class UserController
 {
+    /**
+     * @var UserDAO
+     */
     public $userdao;
+    /**
+     * @var
+     */
     private $type;
+    /**
+     * @var
+     */
     private $ajax_type;
+    /**
+     * @var Validate
+     */
     public $validate;
 
+    /**
+     * UserController constructor.
+     */
     public function __construct()
     {
         $this->userdao = new UserDAO();
@@ -21,6 +39,9 @@ class UserController
         $this->validate = new Validate();
     }
 
+    /**
+     *
+     */
     public function run()
     {
         session_start();
@@ -45,6 +66,9 @@ class UserController
         }
     }
 
+    /**
+     *
+     */
     public function ajaxRun()
     {
         switch ($this->ajax_type) {
@@ -57,8 +81,16 @@ class UserController
         }
     }
 
+    /**
+     *
+     */
     public function Register()
     {
+        $code = $_POST['code'];
+        if ($code != $_SESSION['code']) {
+            echo "<script>alert('Verification code is not correct.please try again!');history.go(-1);</script>";
+            exit();
+        }
         $user = new User();
         $username = $_POST['username'];
         $pwd = $_POST['password'];
@@ -70,17 +102,30 @@ class UserController
         redirect("/index.html");
     }
 
+    /**
+     * @param $pwd
+     * @return string
+     */
     private function sha_password($pwd)
     {
         return hash('SHA256', $pwd);
     }
 
+    /**
+     * @param $pwd
+     * @param string $salt
+     * @return string
+     */
     private function salted_password($pwd, $salt = '$!@><?>HUI&DWQa`')
     {
         $sha1 = $this->sha_password($pwd);
         $sha2 = $this->sha_password($sha1 . $salt);
         return $sha2;
     }
+
+    /**
+     *
+     */
     public function ShowUsers()
     {
         $users = $this->userdao->findUserNotValid();
@@ -92,6 +137,9 @@ class UserController
         echo $response->makeResponse();
     }
 
+    /**
+     *
+     */
     public function apiCheckLogin()
     {
         if (isset($_POST['username'])) {
@@ -110,6 +158,9 @@ class UserController
         }
     }
 
+    /**
+     *
+     */
     public function Login()
     {
         $username = $_POST['username'];
@@ -147,23 +198,37 @@ class UserController
         }
     }
 
+    /**
+     *
+     */
     private function UserLogin()
     {
 
     }
 
+    /**
+     *
+     */
     private function AdminLogin()
     {
 
     }
 
+    /**
+     *
+     */
     public function Logout()
     {
         if ($this->validate->removeSession()) {
+            echo "<script>alert('登出成功');history.go(-1);</script>";
+        } else {
             redirect("/index.html");
         }
     }
 
+    /**
+     *
+     */
     public function adminPass()
     {
         if (isset($_GET['id'])) {
@@ -175,6 +240,9 @@ class UserController
         }
     }
 
+    /**
+     *
+     */
     public function adminDelete()
     {
         if (isset($_GET['id'])) {
