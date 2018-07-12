@@ -62,6 +62,7 @@ class UserController
         $user = new User();
         $username = $_POST['username'];
         $pwd = $_POST['password'];
+        $pwd = $this->salted_password($pwd);
         $idcard = $_POST['idcard'];
         $data = array($username, $pwd, $idcard);
         $user->init($data);
@@ -69,6 +70,17 @@ class UserController
         redirect("/index.html");
     }
 
+    private function sha_password($pwd)
+    {
+        return hash('SHA256', $pwd);
+    }
+
+    private function salted_password($pwd, $salt = '$!@><?>HUI&DWQa`')
+    {
+        $sha1 = $this->sha_password($pwd);
+        $sha2 = $this->sha_password($sha1 . $salt);
+        return $sha2;
+    }
     public function ShowUsers()
     {
         $users = $this->userdao->findUserNotValid();
@@ -102,6 +114,7 @@ class UserController
     {
         $username = $_POST['username'];
         $pwd = $_POST['password'];
+        $pwd = $this->salted_password($pwd);
         $user = $this->userdao->findUserByName($username);
         if ($user == null) {
             redirect("/index.html");
