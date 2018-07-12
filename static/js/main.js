@@ -37,7 +37,7 @@ $(document).ready(function () {
             },
             dataType: 'json',
             success: function (res) {
-                if (res.code == 200) {
+                if (res.code === 200) {
                     alert(res.msg);
                 } else {
                     alert(res.msg);

@@ -6,17 +6,30 @@
     <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/static/css/style.css">
     <link type="text/css" rel="stylesheet" href="/static/css/fileinput.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/mynav.css">
     <link rel="icon" href="/static/icons/lbs.ico" type="image/x-icon"/>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.js"></script>
     <script src="/static/js/fileinput.js"></script>
     <script src="/static/js/fileinput_locale_zh.js"></script>
-    <script src="/static/js/ajax.js"></script>
+    <script src="/static/js/AdminHome.js"></script>
     <title>管理员主页</title>
 </head>
 <body>
 <div class="container">
-    <div class="row"></div>
+    <div class="row">
+        <div class="col-sm-3 mysidebar ">
+            <ul id="myTab" class="mynav_sidebar">
+                <li><a href="#" class="side-menu myactive" data-target="register">用户注册申请</a></li>
+                <li><a href="#" class="side-menu" data-target="applyMAC">用户mac地址申请</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 main choose">
+            <div class="row info">
+
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

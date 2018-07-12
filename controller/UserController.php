@@ -1,7 +1,6 @@
 <?php
 
 require_once "../utils/include.php";
-
 /**
  * Class UserController
  */
@@ -242,6 +241,6 @@ class UserController
     }
 }
 
-$userController = new UserController();
-$userController->run();
-$userController->ajaxRun();
+//$userController = new UserController();
+//$userController->run();
+//$userController->ajaxRun();

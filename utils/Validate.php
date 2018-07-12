@@ -47,6 +47,7 @@ class Validate
         }
         session_start();
         $_SESSION['id'] = $user['id'];
+        setcookie("id", $user['id'], time() + 36000, '/');
         return true;
     }
 
