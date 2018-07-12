@@ -28,7 +28,28 @@ $(document).ready(function () {
         $(".archives-register").show();
         $(".btn-archives-register").addClass("btn-primary");
     });
+    $('.btn-user-logout').click(function (e) {
+        $.ajax({
+            type: 'GET',
+            url: '/controller/UserController.php',
+            data: {
+                type: 'user-logout',
+            },
+            dataType: 'json',
+            success: function (res) {
+                if (res.code == 200) {
+                    alert(res.msg);
+                } else {
+                    alert(res.msg);
+                }
+            },
+            error: function (error) {
+                log('error');
+            },
+        });
+    });
     $('#username').keyup(function () {    //用户输入一个字符就触发响应
+        log('触发用户名ajax校验');
         $.ajax({
             type: 'POST',
             url: '/controller/UserController.php?ajax_type=check_username',
@@ -37,12 +58,15 @@ $(document).ready(function () {
             },
             dataType: 'json',
             success: function (res) {
-                log(res);
                 $("#err_username").html(res['msg']);
             },
             error: function (error) {
-                log('error');
+                log('ajax失败');
             },
         });
+    });
+    $('#codeimg').click(function () {
+        log('验证码被点击');
+        $(this).attr('src', '/midware/Captcha.php?+Math.random()');
     });
 });

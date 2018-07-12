@@ -198,32 +198,19 @@ class UserController
         }
     }
 
-    /**
-     *
-     */
-    private function UserLogin()
-    {
-
-    }
-
-    /**
-     *
-     */
-    private function AdminLogin()
-    {
-
-    }
-
-    /**
-     *
-     */
     public function Logout()
     {
+        $response = new Response(
+            200,
+            '登出成功',
+            null);
         if ($this->validate->removeSession()) {
-            echo "<script>alert('登出成功');history.go(-1);</script>";
         } else {
-            redirect("/index.html");
+            $response->code = 400;
+            $response->msg = '你还没登陆呢就想着登出';
         }
+        $res = $response->makeResponse();
+        echo $res;
     }
 
     /**
