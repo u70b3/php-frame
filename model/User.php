@@ -23,7 +23,23 @@ class User
      */
     public $identity;
     public $company;
+    public $isDeleted;
 
+    /**
+     * @return mixed
+     */
+    public function getIsDeleted()
+    {
+        return $this->isDeleted;
+    }
+
+    /**
+     * @param mixed $isDeleted
+     */
+    public function setIsDeleted($isDeleted): void
+    {
+        $this->isDeleted = $isDeleted;
+    }
     /**
      * @return mixed
      */
@@ -50,6 +66,7 @@ class User
         $this->identity = 1;
         $this->isValid = 0;
         $this->company = '';
+        $this->isDeleted = false;
     }
 //
 //    public function __construct($username, $pwd, $idcard)

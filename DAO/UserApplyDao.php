@@ -27,9 +27,9 @@ class UserApplyDao
         return $result_arr;
     }
 
-    public function findBymac($mac)
+    public function findByMAC($MAC)
     {
-        $result_arr = $this->dbManager->queryOne("select * from user_apply where mac='" . "$mac'");
+        $result_arr = $this->dbManager->queryOne("select * from user_apply where mac='" . "$MAC'");
         return $result_arr;
     }
 
@@ -63,4 +63,18 @@ class UserApplyDao
 
         }
     }
+
+    public function getApplyMsgs()
+    {
+        $res = $this->dbManager->queryAll(
+            "select ua.userid as uid, ua.id as id,u.idcard as idcard,u.username as username,ua.mac as MAC, u.company as company from user_apply as ua inner join user as u on u.id = ua.userid where ua.isValid=false and ua.isDeleted = false"
+        );
+        return $res;
+    }
+
+    public function deleteUserApply($id)
+    {
+        $this->dbManager->run("update user_apply set isDeleted = true where id= " . $id);
+    }
+
 }

@@ -34,7 +34,7 @@
 </nav>
 <div class="container">
     <form class="form-horizontal user-register" method="post"
-          action="/controller/UserController.php?type=user-register">
+          action="/controller/RouteController.php?type=user-register">
         <div class="form-group ">
             <label class="col-sm-2 control-label">账号</label>
             <div class="col-sm-8">
@@ -78,7 +78,7 @@
             </div>
         </div>
     </form>
-    <form class="form-horizontal user-login" method="post" action="/controller/UserController.php?type=user-login">
+    <form class="form-horizontal user-login" method="post" action="/controller/RouteController.php?type=user-login">
         <div class="form-group">
             <label class="col-sm-2 control-label">账号</label>
             <div class="col-sm-8">
@@ -100,3 +100,4 @@
 </div>
 </body>
 </html>
+<!--TODO 登陆不成功的时候给出相应提示-->

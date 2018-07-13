@@ -1,6 +1,7 @@
 <?php
 
 require_once "../utils/include.php";
+
 /**
  * Class UserController
  */
@@ -43,7 +44,6 @@ class UserController
      */
     public function run()
     {
-        session_start();
         switch ($this->type) {
             case "user-register":
                 $this->Register();
@@ -53,14 +53,6 @@ class UserController
                 break;
             case "user-logout":
                 $this->Logout();
-                break;
-            case "archives-register":
-                break;
-            case "admin-pass":
-                $this->adminPass();
-                break;
-            case "admin-delete":
-                $this->adminDelete();
                 break;
         }
     }
@@ -77,13 +69,19 @@ class UserController
             case "check_username":
                 $this->apiCheckLogin();
                 break;
+            case "pass_user":
+                $this->passUser();
+                break;
+            case "delete_user":
+                $this->deleteUser();
+                break;
         }
     }
 
     /**
      *
      */
-    public function Register()
+    private function Register()
     {
         $code = $_POST['code'];
         if ($code != $_SESSION['code']) {
@@ -125,7 +123,7 @@ class UserController
     /**
      *
      */
-    public function ShowUsers()
+    private function ShowUsers()
     {
         $users = $this->userdao->findUserNotValid();
         $response = new Response(
@@ -139,7 +137,7 @@ class UserController
     /**
      *
      */
-    public function apiCheckLogin()
+    private function apiCheckLogin()
     {
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
@@ -160,7 +158,7 @@ class UserController
     /**
      *
      */
-    public function Login()
+    private function Login()
     {
         $username = $_POST['username'];
         $pwd = $_POST['password'];
@@ -197,7 +195,7 @@ class UserController
         }
     }
 
-    public function Logout()
+    private function Logout()
     {
         $response = new Response(
             200,
@@ -215,28 +213,51 @@ class UserController
     /**
      *
      */
-    public function adminPass()
+    public function passUser()
     {
+        $response = new Response(
+            200,
+            '成功',
+            null
+        );
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->userdao->modifyValid($id);
-            redirect("/view/AdminHome.html");
         } else {
-            redirect("/index.html");
+            $response->setCode(400);
+            $response->setMsg('失败');
         }
+        echo $response->makeResponse();
     }
 
     /**
      *
      */
-    public function adminDelete()
+//    public function adminDelete()
+//    {
+//        if (isset($_GET['id'])) {
+//            $id = $_GET['id'];
+//            $this->userdao->deleteUser($id);
+//            redirect("/view/AdminHome.html");
+//        } else {
+//            redirect("/index.html");
+//        }
+//    }
+
+    private function deleteUser()
     {
+        $response = new Response(
+            200,
+            '成功',
+            null
+        );
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->userdao->deleteUser($id);
-            redirect("/view/AdminHome.html");
         } else {
-            redirect("/index.html");
+            $response->setCode(400);
+            $response->setMsg('失败');
         }
+        echo $response->makeResponse();
     }
 }

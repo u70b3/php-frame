@@ -42,6 +42,20 @@ class UserApplyController
         }
     }
 
+    public function ajaxRun()
+    {
+        switch ($this->ajax_type) {
+            case "show_user_applys":
+                $this->showUserApplys();
+                break;
+            case "pass_apply":
+                $this->passApply();
+                break;
+            case "delete_apply":
+                $this->deleteApply();
+                break;
+        }
+    }
     private function apply()
     {
         $code = $_POST['code'];
@@ -50,17 +64,59 @@ class UserApplyController
             exit();
         }
         $userApply = new UserApply(
-            $_POST['mac'],
+            $_POST['MAC'],
             $_POST['userid']
         );
         $this->userApplyDao->addUserApply($userApply);
 //        redirect("/view/404.html");
     }
 
-    public function ajaxRun()
+    private function showUserApplys()
     {
-
+        $user_applys = $this->userApplyDao->getApplyMsgs();
+        $response = new Response(
+            200,
+            'ok',
+            $user_applys
+        );
+        echo $response->makeResponse();
     }
+
+    private function passApply()
+    {
+        $response = new Response(
+            200,
+            '成功',
+            null
+        );
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $this->userApplyDao->modifyValid($id);
+        } else {
+            $response->setCode(400);
+            $response->setMsg('失败');
+        }
+        echo $response->makeResponse();
+    }
+
+    private function deleteApply()
+    {
+        $response = new Response(
+            200,
+            '成功',
+            null
+        );
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $this->userApplyDao->deleteUserApply($id);
+        } else {
+            $response->setCode(400);
+            $response->setMsg('失败');
+        }
+        echo $response->makeResponse();
+    }
+
+
 }
 
 

@@ -52,15 +52,6 @@ class UserDAO
 
     }
 
-    //删除用户
-
-    /**
-     * @param $id
-     */
-    public function deleteUser($id)
-    {
-        $this->dbManager->run("delete from  user where id=" . $id);
-    }
 
     /**
      * @param $id
@@ -116,8 +107,13 @@ class UserDAO
      */
     public function findUserNotValid()
     {
-        $result_arr = $this->dbManager->queryAll("select * from user where identity=1 and isValid=false");
+        $result_arr = $this->dbManager->queryAll("select * from user where identity=1 and isValid=false and isDeleted=false ");
         return $result_arr;
+    }
+
+    public function deleteUser($id)
+    {
+        $this->dbManager->run("update user set isDeleted = true where id= " . $id);
     }
 
     /**

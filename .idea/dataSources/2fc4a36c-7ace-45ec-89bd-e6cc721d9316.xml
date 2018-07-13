@@ -1020,63 +1020,75 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="253" parent="244" name="user_id_uindex">
+    <column id="253" parent="244" name="isDeleted">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="254" parent="244" name="user_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="254" parent="244" name="PRIMARY">
+    <key id="255" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="255" parent="244" name="user_id_uindex">
+    <key id="256" parent="244" name="user_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>user_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="256" parent="245" name="id">
+    <column id="257" parent="245" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="245" name="mac">
+    <column id="258" parent="245" name="mac">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="245" name="userid">
+    <column id="259" parent="245" name="userid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="245" name="isValid">
+    <column id="260" parent="245" name="isValid">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="260" parent="245" name="user_apply_id_uindex">
+    <column id="261" parent="245" name="isDeleted">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="262" parent="245" name="user_apply_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="261" parent="245" name="user_apply_user__fk">
+    <index id="263" parent="245" name="user_apply_user__fk">
       <ColNames>userid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="245" name="PRIMARY">
+    <key id="264" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="263" parent="245" name="user_apply_id_uindex">
+    <key id="265" parent="245" name="user_apply_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>user_apply_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="264" parent="245" name="user_apply_user__fk">
+    <foreign-key id="266" parent="245" name="user_apply_user__fk">
       <ColNames>userid</ColNames>
       <RefSchemaName>manage</RefSchemaName>
       <RefTableName>user</RefTableName>

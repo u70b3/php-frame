@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.btn-user-logout').click(function (e) {
         $.ajax({
             type: 'GET',
-            url: '/controller/UserController.php',
+            url: '/controller/RouteController.php',
             data: {
                 type: 'user-logout',
             },
@@ -52,7 +52,7 @@ $(document).ready(function () {
         log('触发用户名ajax校验');
         $.ajax({
             type: 'POST',
-            url: '/controller/UserController.php?ajax_type=check_username',
+            url: '/controller/RouteController.php?ajax_type=check_username',
             data: {
                 'username': $(this).val(),
             },
@@ -70,3 +70,5 @@ $(document).ready(function () {
         $(this).attr('src', '/midware/Captcha.php?+Math.random()');
     });
 });
+//TODO 注册失败这里要优雅一点
+//TODO 登陆失败也要给出提示

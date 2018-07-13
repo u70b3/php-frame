@@ -3,7 +3,7 @@ $(document).ready(function () {
         let arrstr = document.cookie.split("; ");
         for (let i = 0; i < arrstr.length; i++) {
             let temp = arrstr[i].split("=");
-            if (temp[0] == objname) {
+            if (temp[0] === objname) {
                 return unescape(temp[1]);
             }
         }
