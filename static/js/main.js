@@ -33,12 +33,12 @@ $(document).ready(function () {
             type: 'GET',
             url: '/controller/RouteController.php',
             data: {
-                type: 'user-logout',
+                ajax_type: 'user_logout',
             },
             dataType: 'json',
             success: function (res) {
                 if (res.code === 200) {
-                    alert(res.msg);
+                    window.location.href = "/index.html";
                 } else {
                     alert(res.msg);
                 }
@@ -52,7 +52,7 @@ $(document).ready(function () {
         log('触发用户名ajax校验');
         $.ajax({
             type: 'POST',
-            url: '/controller/RouteController.php?ajax_type=check_username',
+            url: '/controller/RouteController.php?type=check_username',
             data: {
                 'username': $(this).val(),
             },

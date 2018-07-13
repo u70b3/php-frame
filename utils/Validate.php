@@ -30,10 +30,12 @@ class Validate
      */
     public function isLogin()
     {
-        session_start();
-        $id = $_SESSION['id'];
-        $user = $this->userdao->findUserById($id);
-        return $user;
+        if (isset($_SESSION['id'])) {
+            $user = $this->userdao->findUserById($_SESSION['id']);
+            return $user != null;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -45,7 +47,6 @@ class Validate
         if (!isset($user['id'])) {
             return false;
         }
-        session_start();
         $_SESSION['id'] = $user['id'];
         setcookie("id", $user['id'], time() + 36000, '/');
         return true;
@@ -62,4 +63,5 @@ class Validate
         }
         return false;
     }
+
 }

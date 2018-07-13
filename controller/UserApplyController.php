@@ -15,6 +15,7 @@ class UserApplyController
     public $userApplyDao;
     private $type;
     private $ajax_type;
+    private $validate;
 
     /**
      * UserApplyController constructor.
@@ -30,11 +31,11 @@ class UserApplyController
         if (isset($_GET['ajax_type'])) {
             $this->ajax_type = $_GET['ajax_type'];
         }
+        $this->validate = new Validate();
     }
 
     public function run()
     {
-//        session_start();
         switch ($this->type) {
             case "user-apply":
                 $this->apply();
@@ -68,7 +69,7 @@ class UserApplyController
             $_POST['userid']
         );
         $this->userApplyDao->addUserApply($userApply);
-//        redirect("/view/404.html");
+        redirect("/view/UserHome.html");
     }
 
     private function showUserApplys()

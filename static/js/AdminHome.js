@@ -179,6 +179,7 @@ let deleteUserEvent = function () {
     });
 };
 
+
 let __main = function () {
     getData(showUserInfo, 'show_users');
     sideMenuEvents();
@@ -188,5 +189,6 @@ let __main = function () {
     deleteUserEvent();
 };
 $(document).ready(function () {
+
     __main();
 });

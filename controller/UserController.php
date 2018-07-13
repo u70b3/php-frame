@@ -51,12 +51,11 @@ class UserController
             case "user-login":
                 $this->Login();
                 break;
-            case "user-logout":
-                $this->Logout();
+            case "check_username":
+                $this->apiCheckLogin();
                 break;
         }
     }
-
     /**
      *
      */
@@ -66,14 +65,15 @@ class UserController
             case "show_users":
                 $this->ShowUsers();
                 break;
-            case "check_username":
-                $this->apiCheckLogin();
-                break;
+
             case "pass_user":
                 $this->passUser();
                 break;
             case "delete_user":
                 $this->deleteUser();
+                break;
+            case "user_logout":
+                $this->Logout();
                 break;
         }
     }
@@ -85,7 +85,10 @@ class UserController
     {
         $code = $_POST['code'];
         if ($code != $_SESSION['code']) {
-            echo "<script>alert('Verification code is not correct.please try again!');history.go(-1);</script>";
+            echo "
+                <script>alert('Verification code is not correct.please try again!');
+                history.go(-1);
+                </script>";
             exit();
         }
         $user = new User();
@@ -202,9 +205,12 @@ class UserController
             '登出成功',
             null);
         if ($this->validate->removeSession()) {
+            //pass
+
         } else {
             $response->code = 400;
             $response->msg = '你还没登陆呢就想着登出';
+            $response->msg = $_SESSION;
         }
         $res = $response->makeResponse();
         echo $res;
@@ -229,20 +235,6 @@ class UserController
         }
         echo $response->makeResponse();
     }
-
-    /**
-     *
-     */
-//    public function adminDelete()
-//    {
-//        if (isset($_GET['id'])) {
-//            $id = $_GET['id'];
-//            $this->userdao->deleteUser($id);
-//            redirect("/view/AdminHome.html");
-//        } else {
-//            redirect("/index.html");
-//        }
-//    }
 
     private function deleteUser()
     {

@@ -7,17 +7,37 @@
  */
 require_once "../utils/include.php";
 
-function main()
+class RouteController
 {
-    session_start();
-    $userController = new UserController();
-    $userApplyController = new UserApplyController();
-    $userController->run();
-    $userController->ajaxRun();
-    $userApplyController->run();
-    $userApplyController->ajaxRun();
+    public $validate;
+    public $userController;
+    public $userApplyController;
+
+    /**
+     * RouteController constructor.
+     */
+    public function __construct()
+    {
+        $this->validate = new Validate();
+        $this->userController = new UserController();
+        $this->userApplyController = new UserApplyController();
+    }
+
+    public function run()
+    {
+        session_start();
+        $this->userController->run();
+        $this->userApplyController->run();
+        if (!$this->validate->isLogin()) {
+            return;
+        }
+        $this->userController->ajaxRun();
+        $this->userApplyController->ajaxRun();
+    }
 }
 
-if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
-    main();
-}
+$routeController = new RouteController();
+$routeController->run();
+//if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
+//    main();
+//}
