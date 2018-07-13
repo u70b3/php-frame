@@ -240,7 +240,3 @@ class UserController
         }
     }
 }
-
-//$userController = new UserController();
-//$userController->run();
-//$userController->ajaxRun();

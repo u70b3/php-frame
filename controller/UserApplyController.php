@@ -34,7 +34,7 @@ class UserApplyController
 
     public function run()
     {
-        session_start();
+//        session_start();
         switch ($this->type) {
             case "user-apply":
                 $this->apply();
@@ -63,5 +63,4 @@ class UserApplyController
     }
 }
 
-$userApplyController = new UserApplyController();
-$userApplyController->run();
+
