@@ -9,6 +9,7 @@ let insert = function (arr, func) {
 let showUserInfo = function (res) {
     $('.infoTemplate').hide();
     let users = res['data'];
+    log(users);
     insert(users, insertUserInfo);
 };
 let showUserApply = function (res) {
@@ -75,6 +76,7 @@ let insertUserInfo = function (user) {
     let UserInfoCell = UserInfoTemplate(user);
     let UserInfoList = $('.info');
     UserInfoList.append(UserInfoCell);
+    // console.log('fuck it');
 };
 let insertUserApply = function (userApply) {
     let UserApplyCell = UserApplyTemplate(userApply);
@@ -108,7 +110,7 @@ let getData = function (func, ajax_type) {
         },
     });
 };
-let changeStatus = function (ajax_type, id) {
+let changeStatus = function (ajax_type, id, func, route) {
     $.ajax({
         type: 'GET',
         url: '/controller/RouteController.php',
@@ -119,6 +121,8 @@ let changeStatus = function (ajax_type, id) {
         dataType: 'json',
         success: function (res) {
             log('ajax成功');
+            getData(func, route);
+            // getData(showUserInfo, 'show_users');
         },
         error: function (error) {
             log('ajax失败');
@@ -141,8 +145,8 @@ let passEvent = function () {
         e.stopPropagation();
         let id = $(this).parents('.infoTemplate').find('.table-id').html();
         // log(id);
-        changeStatus('pass_user', id);
-        getData(showUserInfo, 'show_users');
+        changeStatus('pass_user', id, showUserInfo, 'show_users');
+        // getData(showUserInfo, 'show_users');
     });
 };
 
@@ -152,8 +156,8 @@ let passApplyEvent = function () {
         e.stopPropagation();
         let id = $(this).parents('.infoTemplate').find('.table-id').html();
         log(id);
-        changeStatus('pass_apply', id);
-        getData(showUserApply, 'show_user_applys');
+        changeStatus('pass_apply', id, showUserApply, 'show_user_applys');
+        // getData(showUserApply, 'show_user_applys');
     });
 };
 
@@ -163,8 +167,8 @@ let deleteApplyEvent = function () {
         e.stopPropagation();
         let id = $(this).parents('.infoTemplate').find('.table-id').html();
         // log(id);
-        changeStatus('delete_apply', id);
-        getData(showUserApply, 'show_user_applys');
+        changeStatus('delete_apply', id, showUserApply, 'show_user_applys');
+        // getData(showUserApply, 'show_user_applys');
     });
 };
 
@@ -174,8 +178,8 @@ let deleteUserEvent = function () {
         e.stopPropagation();
         let id = $(this).parents('.infoTemplate').find('.table-id').html();
         // log(id);
-        changeStatus('delete_user', id);
-        getData(showUserInfo, 'show_users');
+        changeStatus('delete_user', id, showUserInfo, 'show_users');
+
     });
 };
 
@@ -189,6 +193,5 @@ let __main = function () {
     deleteUserEvent();
 };
 $(document).ready(function () {
-
     __main();
 });

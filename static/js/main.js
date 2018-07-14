@@ -69,6 +69,25 @@ $(document).ready(function () {
         log('验证码被点击');
         $(this).attr('src', '/midware/Captcha.php?+Math.random()');
     });
+    $('#confirm').blur(function () {    //确认密码检测
+        let val = $('#password').val();
+        log('触发密码校验', val);
+        if (val !== '') {
+            if ($(this).val() === '') {
+                $('#dis_con_pwd').text('请输入您的密码');
+                pwdFlag = false;
+            } else if ($(this).val() !== val) {
+                $('#dis_con_pwd').text('请确认您的密码');
+                pwdFlag = false;
+            } else {
+                $('#dis_con_pwd').text('');
+                pwdFlag = true;
+            }
+        } else {
+            $('#dis_con_pwd').text('');
+            pwdFlag = false;
+        }
+    });
 });
 //TODO 注册失败这里要优雅一点
 //TODO 登陆失败也要给出提示

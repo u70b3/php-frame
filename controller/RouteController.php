@@ -2,7 +2,7 @@
 /**
  * Created by IntelliJ IDEA.
  * User: kid_1412
- * Date: 2018/7/13
+ * Date: 2018/7/14
  * Time: 10:12
  */
 require_once "../utils/include.php";
@@ -28,9 +28,11 @@ class RouteController
         session_start();
         $this->userController->run();
         $this->userApplyController->run();
+
         if (!$this->validate->isLogin()) {
             return;
         }
+
         $this->userController->ajaxRun();
         $this->userApplyController->ajaxRun();
     }

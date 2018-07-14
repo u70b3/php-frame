@@ -4,12 +4,9 @@
     <list default="true" id="cadfbcf8-43c1-47da-94c7-f33970788100" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/RouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RouteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UserApplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserApplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/AdminHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/AdminHome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/AdminHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/AdminHome.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,38 +65,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AdminHome.js" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdminHome.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/AdminHome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="147" selection-start-line="147" selection-end-line="147" />
-              <folding>
-                <element signature="e#34#158#0" />
-                <element signature="e#195#293#0" />
-                <element signature="e#330#461#0" />
-                <element signature="e#502#1600#0" />
-                <element signature="e#1647#2921#0" />
-                <element signature="e#2960#3084#0" />
-                <element signature="e#3129#3263#0" />
-                <element signature="e#3312#3389#0" />
-                <element signature="e#3428#3615#0" />
-                <element signature="e#3658#3985#0" />
-                <element signature="e#4031#4375#0" />
-                <element signature="e#4410#4697#0" />
-                <element signature="e#4727#5045#0" />
-                <element signature="e#5443#5774#0" />
-                <element signature="e#5811#6133#0" />
-              </folding>
+            <state relative-caret-position="384">
+              <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserApply.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/UserApply.php">
+      <file leaf-file-name="AdminHome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/AdminHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="750">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -107,8 +87,11 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="54" column="71" lean-forward="true" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+            <state relative-caret-position="1425">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+              <folding>
+                <element signature="e#1543#2022#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserHome.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/UserHome.html">
+      <file leaf-file-name="UserDao.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/UserDao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="2775">
+              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -140,29 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
+      <file leaf-file-name="UserHome.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/UserHome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserApplyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/UserApplyController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            <state relative-caret-position="325">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -170,8 +135,20 @@
       <file leaf-file-name="Validate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Validate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="474">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#297#498#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,8 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>var</find>
-      <find>ajax_type</find>
       <find>init</find>
       <find>专业</find>
       <find>font</find>
@@ -198,7 +173,6 @@
       <find>Login</find>
       <find>attr</find>
       <find>show</find>
-      <find>code</find>
       <find>var_dump</find>
       <find>UserController</find>
       <find>UserApplyController</find>
@@ -218,6 +192,9 @@
       <find>btn-user-logout</find>
       <find>check_username</find>
       <find>appl</find>
+      <find>login</find>
+      <find>code</find>
+      <find>sidebar</find>
     </findStrings>
     <replaceStrings>
       <replace>dbManager-&gt;entity</replace>
@@ -236,9 +213,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response27.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -277,14 +251,14 @@
         <option value="$PROJECT_DIR$/DAO/UserDao.php" />
         <option value="$PROJECT_DIR$/static/js/UserHome.js" />
         <option value="$PROJECT_DIR$/static/css/mynav.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/static/js/AdminHome.js" />
         <option value="$PROJECT_DIR$/view/AdminHome.html" />
-        <option value="$PROJECT_DIR$/controller/RouteController.php" />
         <option value="$PROJECT_DIR$/utils/Validate.php" />
         <option value="$PROJECT_DIR$/controller/UserController.php" />
-        <option value="$PROJECT_DIR$/static/js/main.js" />
         <option value="$PROJECT_DIR$/controller/UserApplyController.php" />
+        <option value="$PROJECT_DIR$/controller/RouteController.php" />
+        <option value="$PROJECT_DIR$/static/js/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/static/js/AdminHome.js" />
       </list>
     </option>
   </component>
@@ -314,10 +288,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="560" />
-    <option name="y" value="36" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="142" />
+    <option name="y" value="60" />
+    <option name="width" value="1382" />
+    <option name="height" value="888" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -327,6 +301,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,9 +356,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,7 +365,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/work/Java/wenda" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -741,6 +715,9 @@
       <workItem from="1531360609117" duration="24359000" />
       <workItem from="1531386478057" duration="1076000" />
       <workItem from="1531447500960" duration="25560000" />
+      <workItem from="1531474907629" duration="63000" />
+      <workItem from="1531545443404" duration="6823000" />
+      <workItem from="1531555262551" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="添加了身份验证功能和管理员的后台管理功能，通过identity字段实现分级功能，前端实现全ajax化，后端提供JSON接口">
       <created>1531218734053</created>
@@ -826,11 +803,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531468623995</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="认证授权机制增加成功">
+      <created>1531474971477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1531474971477</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94511000" />
+    <option name="totallyTimeSpent" value="101707000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -846,39 +830,40 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.32900432" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.22654584" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="0" weight="0.14502165" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Statistic" order="1" weight="0.29220778" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20735608" />
-      <window_info id="Structure" order="1" sideWeight="0.50108224" side_tool="true" weight="0.19722815" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.24242425" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" weight="0.32900432" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="REST Client" order="12" visible="true" weight="0.27705628" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49946696" weight="0.38961038" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.32900432" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.22654584" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" auto_hide="true" x="162" y="250" width="1248" height="492" id="Version Control" order="16" sideWeight="0.49946696" weight="0.46212122" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32900432" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.26406926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891776" visible="true" weight="0.19722815" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.18722944" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958159" visible="true" weight="0.20362474" />
+      <window_info anchor="bottom" id="Statistic" order="1" weight="0.52056277" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20735608" />
       <window_info anchor="right" id="SciView" order="0" weight="0.27292112" />
+      <window_info id="Structure" order="1" sideWeight="0.5041841" side_tool="true" weight="0.20149253" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="0" weight="0.31060606" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" weight="0.32900432" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.20454545" />
+      <window_info anchor="bottom" id="REST Client" order="12" visible="true" weight="0.27705628" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="right" id="Module Dependencies" order="10" weight="0.14392324" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.18070363" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.18722944" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -939,14 +924,15 @@
     <MESSAGE value="添加Cookie功能，追踪用户id，添加用户申请表以及相应的Controller,Dao,Model层，管理员页面增加功能,用户页面可以提交申请，" />
     <MESSAGE value="备份可用路由功能，待会儿就不一定了" />
     <MESSAGE value="把删除和通过都模块化，前端的a标签全部换成button，通过绑定click事件来完成删除和通过操作。" />
-    <option name="LAST_COMMIT_MESSAGE" value="把删除和通过都模块化，前端的a标签全部换成button，通过绑定click事件来完成删除和通过操作。" />
+    <MESSAGE value="认证授权机制增加成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="认证授权机制增加成功" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -954,12 +940,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UserDao.php" />
-    <entry file="file://$PROJECT_DIR$/UserDao.php" />
-    <entry file="file://$PROJECT_DIR$/UserDao.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc4a36c-7ace-45ec-89bd-e6cc721d9316/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc4a36c-7ace-45ec-89bd-e6cc721d9316/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1050,27 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/2fc4a36c-7ace-45ec-89bd-e6cc721d9316.SCHEMA:manage">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.SCHEMA:manage</OriginalElement>
-          <nodes>
-            <node x="" y="">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply</node>
-            <node x="" y="">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.1" x="105.0" y="392.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category />
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/include.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1092,13 +1051,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/fileinput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1111,13 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="n#getCode#0;n#Response#0;n#!!top" />
-            <element signature="n#setCode#0;n#Response#0;n#!!top" />
-            <element signature="n#getMsg#0;n#Response#0;n#!!top" />
-            <element signature="n#setMsg#0;n#Response#0;n#!!top" />
-            <element signature="n#getData#0;n#Response#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,20 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="140" column="5" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/UserHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/UserApplyDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="76" column="87" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="87" />
         </state>
       </provider>
     </entry>
@@ -1153,9 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,23 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/AdminHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="63" lean-forward="true" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/PDO/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1204,90 +1116,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/UserDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/midware/Captcha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Validate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="54" column="71" lean-forward="true" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/AdminHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-          <folding>
-            <element signature="e#34#158#0" />
-            <element signature="e#195#293#0" />
-            <element signature="e#330#461#0" />
-            <element signature="e#502#1600#0" />
-            <element signature="e#1647#2921#0" />
-            <element signature="e#2960#3084#0" />
-            <element signature="e#3129#3263#0" />
-            <element signature="e#3312#3389#0" />
-            <element signature="e#3428#3615#0" />
-            <element signature="e#3658#3985#0" />
-            <element signature="e#4031#4375#0" />
-            <element signature="e#4410#4697#0" />
-            <element signature="e#4727#5045#0" />
-            <element signature="e#5443#5774#0" />
-            <element signature="e#5811#6133#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/UserApply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="600">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/view/UserHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        <state relative-caret-position="1575">
+          <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-215.0" y="16.0" />
+          <SelectedNodes>
+            <node>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply</OriginalElement>
+          <nodes>
+            <node x="13.0" y="274.0">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply</node>
+            <node x="0.0" y="0.0">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply" target="2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user">
+              <point x="0.0" y="-76.0" />
+              <point x="0.0" y="112.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-215.0" y="117.0" />
+          <SelectedNodes>
+            <node>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/UserApplyDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/UserApplyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        <state relative-caret-position="-50">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="das://2fc4a36c-7ace-45ec-89bd-e6cc721d9316/schema/manage/table/user_apply">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/2fc4a36c-7ace-45ec-89bd-e6cc721d9316.SCHEMA:manage">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
-          <filtering enabled="true" />
+          <ID>DATABASE</ID>
+          <OriginalElement>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.SCHEMA:manage</OriginalElement>
+          <nodes>
+            <node x="13.0" y="274.0">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply</node>
+            <node x="0.0" y="0.0">2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user_apply" target="2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user">
+              <point x="0.0" y="-76.0" />
+              <point x="0.0" y="112.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.7000000000000002" x="-71.0" y="111.0" />
+          <SelectedNodes>
+            <node>2fc4a36c-7ace-45ec-89bd-e6cc721d9316.TABLE:manage.user</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/midware/Captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1053">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/couchbase/couchbase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="2025" column="10" selection-start-line="2025" selection-start-column="10" selection-end-line="2025" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/UserHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/UserDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/AdminHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1298,10 +1282,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/UserHome.html">
+    <entry file="das://2fc4a36c-7ace-45ec-89bd-e6cc721d9316/schema/manage/table/user_apply">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="1425">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding>
+            <element signature="e#1543#2022#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#297#498#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/work/Java/wenda/wenda.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Validate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/AdminHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
         </state>
       </provider>
     </entry>
