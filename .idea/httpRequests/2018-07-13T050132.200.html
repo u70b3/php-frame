@@ -1,0 +1,14 @@
+<br/>
+<b>Notice</b>:  Undefined index: id in <b>C:\SDK\xampp\www\utils\Validate.php</b> on line <b>33</b><br/>
+<br/>
+<b>Fatal
+    error</b>:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\SDK\xampp\www\midware\DBManager.php:66
+Stack trace:
+#0 C:\SDK\xampp\www\midware\DBManager.php(66): PDO-&gt;query('select * from u...')
+#1 C:\SDK\xampp\www\DAO\UserDao.php(101): DBManager-&gt;queryOne('select * from u...')
+#2 C:\SDK\xampp\www\utils\Validate.php(34): UserDAO-&gt;findUserById(NULL)
+#3 C:\SDK\xampp\www\controller\UserController.php(65): Validate-&gt;isLogin()
+#4 C:\SDK\xampp\www\controller\RouteController.php(16): UserController-&gt;ajaxRun()
+#5 C:\SDK\xampp\www\controller\RouteController.php(22): main()
+#6 {main}
+thrown in <b>C:\SDK\xampp\www\midware\DBManager.php</b> on line <b>66</b><br/>

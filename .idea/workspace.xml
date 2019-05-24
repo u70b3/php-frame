@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cadfbcf8-43c1-47da-94c7-f33970788100" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/RouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RouteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/AdminHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/AdminHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,11 +62,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdminHome.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminHome.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/AdminHome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+            <state relative-caret-position="2725">
+              <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -135,17 +131,17 @@
       <file leaf-file-name="Validate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Validate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="975">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="725">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#297#498#0#PHP" />
               </folding>
@@ -301,8 +297,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -717,7 +713,8 @@
       <workItem from="1531447500960" duration="25560000" />
       <workItem from="1531474907629" duration="63000" />
       <workItem from="1531545443404" duration="6823000" />
-      <workItem from="1531555262551" duration="310000" />
+      <workItem from="1531555262551" duration="437000" />
+      <workItem from="1532425196195" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="添加了身份验证功能和管理员的后台管理功能，通过identity字段实现分级功能，前端实现全ajax化，后端提供JSON接口">
       <created>1531218734053</created>
@@ -810,11 +807,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531474971477</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="前端页面的修改，回调机制的修缮，修复了通过/删除之后的页面load问题">
+      <created>1531555696654</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1531555696655</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101707000" />
+    <option name="totallyTimeSpent" value="101855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,7 +846,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32900432" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958159" visible="true" weight="0.20362474" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958159" visible="true" weight="0.20575693" />
       <window_info anchor="bottom" id="Statistic" order="1" weight="0.52056277" />
       <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20735608" />
       <window_info anchor="right" id="SciView" order="0" weight="0.27292112" />
@@ -925,7 +929,8 @@
     <MESSAGE value="备份可用路由功能，待会儿就不一定了" />
     <MESSAGE value="把删除和通过都模块化，前端的a标签全部换成button，通过绑定click事件来完成删除和通过操作。" />
     <MESSAGE value="认证授权机制增加成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="认证授权机制增加成功" />
+    <MESSAGE value="前端页面的修改，回调机制的修缮，修复了通过/删除之后的页面load问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端页面的修改，回调机制的修缮，修复了通过/删除之后的页面load问题" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1247,10 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1299,16 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#297#498#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/work/Java/wenda/wenda.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1318,15 +1309,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Validate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="975">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/AdminHome.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+        <state relative-caret-position="2725">
+          <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/RouteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#297#498#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

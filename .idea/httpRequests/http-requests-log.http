@@ -1,0 +1,104 @@
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=show_users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T050328.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=show_users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T050313.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=show_users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T050132.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=delete-user&id=8
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=admin-pass&id=8
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T012357.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=admin-pass&id=8
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T012335.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=admin-pass&id=8
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=admin-pass
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=show_users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T012150.200.html
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=show-users
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php?ajax_type=admin-pass&id=8
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1/controller/RouteController.php
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET /127.0.0.1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET /127.0.0.1/controller/RouteController.php
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://www.baidu.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-11T013042.200.html
+
+###
+
